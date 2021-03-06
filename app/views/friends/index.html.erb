@@ -22,11 +22,8 @@
           <td><%= friend.address %></td>
           <td><%= friend.emergency_contact_name%></td>
           <td><%= friend.emergency_contact_number%></td>
-
-          <% if friend.user == current_user %>
           <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
         </tr>
-        <% end %>
   <% end %>
 
   <% else %>

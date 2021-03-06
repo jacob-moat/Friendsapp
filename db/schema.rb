@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2021_03_06_014144) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "emergency_contact_name"
     t.string "emergency_contact_number"
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
