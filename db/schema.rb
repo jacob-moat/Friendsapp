@@ -1,14 +1,21 @@
-ActiveRecord::Schema.define(version: 2021_03_06_014144) do
+ActiveRecord::Schema.define(version: 2021_03_06_195739) do
 
   create_table "friends", force: :cascade do |t|
+    t.integer "client_id"
+    t.string "title"
     t.string "first_name"
     t.string "last_name"
+    t.date "dob"
     t.string "phone_number"
     t.string "address"
+    t.string "condition"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "emergency_contact_name"
+    t.string "emergency_contact_relationship"
     t.string "emergency_contact_number"
+    t.string "key_code"
+    t.string "vaccine_status"
     t.integer "user_id"
   end
 

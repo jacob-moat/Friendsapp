@@ -5,11 +5,18 @@
   <table class="table table-striped table-bordered table-hover">
     <thead class="table-dark">
       <tr>
+        <th>Client Id</th>
+        <th>Title</th>
         <th>Name</th>
+        <th>Date of Birth</th>
         <th>Phone number</th>
         <th>Address</th>
+        <th>Condition</th>
         <th>Emergency Contact Name</th>
+        <th>Emergency Contact Relationship</th>
         <th>Emergency Contact Number</th>
+        <th>Key code</th>
+        <th>Vaccine Status</th>
         <th> </th>
       </tr>
     </thead>
@@ -17,11 +24,19 @@
     <tbody>
       <% @friends.each do |friend| %>
         <tr>
+          <td><%= friend.client_id %></td>
+          <td><%= friend.title %></td>
           <td><%= link_to friend.first_name + ' ' + friend.last_name, friend %></td>
+          <td><%= friend.dob %></td>
           <td><%= friend.phone_number %></td>
           <td><%= friend.address %></td>
-          <td><%= friend.emergency_contact_name%></td>
-          <td><%= friend.emergency_contact_number%></td>
+          <td><%= friend.condition %></td>
+          <td><%= friend.emergency_contact_name %></td>
+          <td><%= friend.emergency_contact_relationship%></td>
+          <td><%= friend.emergency_contact_number %></td>
+          <td><%= friend.key_code%></td>
+          <td><%= friend.vaccine_status%></td>
+          <td></td>
 
           <% if friend.user == current_user %>
           <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
