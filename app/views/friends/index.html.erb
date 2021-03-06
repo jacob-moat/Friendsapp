@@ -1,0 +1,34 @@
+<% if user_signed_in? %>
+
+  <h1>Clients</h1>
+
+  <table class="table table-striped table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Phone number</th>
+        <th>Address</th>
+        <th>Emergency Contact Name</th>
+        <th>Emergency Contact Number</th>
+        <th> </th>
+      </tr>
+    </thead>
+    <br/>
+    <tbody>
+      <% @friends.each do |friend| %>
+        <tr>
+          <td><%= link_to friend.first_name + ' ' + friend.last_name, friend %></td>
+          <td><%= friend.phone_number %></td>
+          <td><%= friend.address %></td>
+          <td><%= friend.emergency_contact_name%></td>
+          <td><%= friend.emergency_contact_number%></td>
+
+          <% if friend.user == current_user %>
+          <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+        </tr>
+        <% end %>
+  <% end %>
+
+  <% else %>
+
+  <% end %>

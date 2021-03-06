@@ -1,0 +1,49 @@
+<%= form_with(model: friend) do |form| %>
+  <% if friend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+      <ul>
+        <% friend.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field, form-control">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class: "form-control", placeholder: "First name" %>
+  </div>
+  <br/>
+  <div class="field, form-control">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class: "form-control", placeholder: "Last name" %>
+  </div>
+  <br/>
+  <div class="field, form-control">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, class: "form-control", placeholder: "Phone number" %>
+  </div>
+  <br/>
+  <div class="field, form-control">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: "form-control", placeholder: "Address" %>
+  </div>
+  <br/>
+  <div class="field, form-control">
+    <%= form.label :emergency_contact_name %>
+    <%= form.text_field :emergency_contact_name, class: "form-control", placeholder: "Emergency Contact Name" %>
+  </div>
+  <br/>
+  <div class="field, form-control">
+    <%= form.label :emergency_contact_number %>
+    <%= form.text_field :emergency_contact_number, class: "form-control", placeholder: "Emergency Contact Number" %>
+  </div>
+  <br/>
+   <div class="field">
+    <%= form.number_field :user_id, id: :friend_user_id, value: current_user.id, type: "hidden" %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Add Client",  class: "btn btn-secondary"%>
+  </div>
+<% end %>
