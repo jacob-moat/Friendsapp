@@ -1,7 +1,7 @@
 
-  <h1> <%= @friend.title %><%= @friend.first_name %> <%= @friend.last_name %> </h1>
+  <h1> <%= @friend.title %> <%= @friend.first_name %> <%= @friend.last_name %> </h1>
   <br/>
-  <p class="lead"> <%= @friend.dob %> | <%= @friend.phone_number %> | <%= @friend.address %> | <%= @friend.condition %> | <%= @friend.emergency_contact_name %>| <%= @friend.emergency_contact_relationship %> | <%= @friend.emergency_contact_number %> | <%= @friend.key_code %> | <%= @friend.vaccine_status %> </p>
+  <p class="lead"> <%= @friend.dob %> | <%= @friend.phone_number %> | <%= @friend.address %> | <%= @friend.condition %> | <%= @friend.emergency_contact_name %> | <%= @friend.emergency_contact_relationship %> | <%= @friend.emergency_contact_number %> | <%= @friend.key_code %> | <%= @friend.vaccine_status %> </p>
   <br/>
   <%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-secondary" %> 
   <%= link_to 'Back', friends_path, class: "btn btn-secondary" %>
