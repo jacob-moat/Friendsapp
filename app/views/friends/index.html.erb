@@ -17,7 +17,6 @@
     <tbody>
       <% @friends.each do |friend| %>
         <tr>
-          <td><%= friend.client_id %></td>
           <td><%= friend.title %></td>
           <td><%= link_to friend.first_name + ' ' + friend.last_name, friend %></td>
           <td><%= friend.dob %></td>
