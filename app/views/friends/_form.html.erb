@@ -10,12 +10,6 @@
       </ul>
     </div>
   <% end %>
-  
-  <div class="field, form-control">
-    <%= form.label :client_id %>
-    <%= form.number_field :client_id, class: "form-control", placeholder: "Client ID" %>
-  </div>
-  <br/>
 
   <div class="field, form-control">
     <%= form.label :title %>
@@ -53,47 +47,11 @@
   </div>
   <br/>
 
-  <div class="field, form-control">
-    <%= form.label :condition %>
-    <%= form.text_field :condition, class: "form-control", placeholder: "Medical condition" %>
-  </div>
-  <br/>
-
-  <div class="field, form-control">
-    <%= form.label :emergency_contact_name %>
-    <%= form.text_field :emergency_contact_name, class: "form-control", placeholder: "Emergency Contact Name" %>
-  </div>
-  <br/>
-
-  <div class="field, form-control">
-    <%= form.label :emergency_contact_relationship %>
-    <%= form.text_field :emergency_contact_relationship, class: "form-control", placeholder: "Emergency Contact Relationship" %>
-  </div>
-  <br/>
-
-  <div class="field, form-control">
-    <%= form.label :emergency_contact_number %>
-    <%= form.text_field :emergency_contact_number, class: "form-control", placeholder: "Emergency Contact Number" %>
-  </div>
-  <br/>
-
-  <div class="field, form-control">
-    <%= form.label :key_code %>
-    <%= form.text_field :key_code, class: "form-control", placeholder: "Key Code" %>
-  </div>
-  <br/>
-
-  <div class="field, form-control">
-    <%= form.label :vaccine_status %>
-    <%= form.text_field :vaccine_status, class: "form-control", placeholder: "Covid-19 Vaccine Status" %>
-  </div>
-  <br/>
-
    <div class="field">
     <%= form.number_field :user_id, id: :friend_user_id, value: current_user.id, type: "hidden" %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Add Client",  class: "btn btn-secondary"%>
+    <%= form.submit "Add Friend",  class: "btn btn-secondary"%>
   </div>
 <% end %>
